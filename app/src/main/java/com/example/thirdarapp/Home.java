@@ -20,7 +20,7 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
         listView = findViewById(R.id.list);
-        String[] list={"videomodel","website render","image renderer"};
+        String[] list={"videomodel","website render","image renderer","image Trigger"};
         ArrayAdapter adapter=new ArrayAdapter<String>(this,R.layout.text,list);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -32,6 +32,8 @@ public class Home extends AppCompatActivity {
                     case 1: startActivity(new Intent(Home.this,website_renderer.class));
                     break;
                     case 2: startActivity(new Intent(Home.this,image_renderer.class));
+                        break;
+                    case 3: startActivity(new Intent(Home.this,image_renderer.class));
                         break;
                 }
             }
